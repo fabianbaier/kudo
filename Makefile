@@ -39,7 +39,7 @@ run: generate fmt vet
                      -X ${BUILD_DATE_PATH}=${BUILD_DATE}" ./cmd/manager/main.go
 
 # Install CRDs into a cluster
-install: manifests cli
+install: manifests
 	kubectl apply -f config/crds
 
 # Deploy controller in the configured Kubernetes cluster in ~/.kube/config
